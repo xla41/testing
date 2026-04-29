@@ -1,146 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Company Name</title>
 
-    body {
-      line-height: 1.6;
-      color: #333;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-    }
+/* Header */
+header {
+  background: #111;
+  color: white;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 15px;
-    }
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
 
-    .hero {
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-      padding: 20px;
-    }
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+}
 
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.hero button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: orange;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    .section h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
+/* Sections */
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .about, .contact {
-      text-align: center;
-    }
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
-      margin: auto;
-    }
+/* Services */
+.services {
+  display: grid;
+  gap: 20px;
+}
 
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
+.service {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-    button {
-      padding: 10px;
-      background: #111;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: white;
-    }
-  </style>
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <nav>
-    <div><strong>YourSite</strong></div>
+    <div><strong>Your Company</strong></div>
     <div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
 
-<section class="hero" id="home">
-  <div>
-    <h1>Welcome to Your Website</h1>
-    <p>This is your new website. Customize it however you want.</p>
-  </div>
+<section class="hero">
+  <h1>Quality Home Remodeling You Can Trust</h1>
+  <p>Serving your area with professional construction and remodeling services</p>
+  <button onclick="location.href='#contact'">Get a Free Estimate</button>
 </section>
 
-<section class="section about" id="about">
-  <h2>About</h2>
-  <p>Write about yourself or your business here. Explain what you do and why it matters.</p>
+<section class="section services" id="services">
+  <h2>Our Services</h2>
+
+  <div class="service">
+    <h3>Kitchen Remodeling</h3>
+    <p>Modern, functional kitchen upgrades tailored to your needs.</p>
+  </div>
+
+  <div class="service">
+    <h3>Bathroom Remodeling</h3>
+    <p>Clean, stylish, and durable bathroom renovations.</p>
+  </div>
+
+  <div class="service">
+    <h3>General Construction</h3>
+    <p>From small upgrades to full home projects.</p>
+  </div>
+
+</section>
+
+<section class="section" id="work">
+  <h2>Our Work</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb">
+  </div>
+  <p style="text-align:center;">More projects coming soon</p>
 </section>
 
 <section class="section contact" id="contact">
-  <h2>Contact</h2>
-  <form onsubmit="handleSubmit(event)">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <h2>Contact Us</h2>
+  <p>Call us today for a free estimate</p>
+
+  <!-- REPLACE THIS WITH YOUR REAL NUMBER -->
+  <a href="tel:1234567890">Call Now</a>
+
+  <p>Email: your@email.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Your Website</p>
+  <p>© 2026 Your Company Name</p>
 </footer>
-
-<script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert("Message sent! (This is a demo form)");
-  }
-</script>
 
 </body>
 </html>
